@@ -1,0 +1,79 @@
+@font-face {
+  font-family: rygood_handwriting3regular;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../public/rygoodhandwriting3-regular_1-webfont.woff2) format("woff2"),
+    url(../public/rygoodhandwriting3-regular_1-webfont.woff2) format("woff");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+/* SCROLL DA TELA  */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffc001;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ffc001;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 255);
+  border-radius: 6px;
+}
+/* SCROLL DA TELA  */
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.form-vendor {
+  background-color: rgb(63, 63, 63);
+  width: 800px;
+  height: 600px;
+  transform: translate(75%, 25%);
+  border: #ffc001 solid 2px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #ffc001;
+}
+
+label,
+input,
+select,
+button,
+textarea {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 100px;
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  background-color: rgb(63, 63, 63);
+}
+
+input {
+  border: #ffc001 solid 1px;
+  border-radius: 5px;
+}
+
+textarea {
+  border: #ffc001 solid 1px;
+  border-radius: 5px;
+}
+
+.file-upload {
+  background-color: rgb(63, 63, 63);
+}
