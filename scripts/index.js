@@ -17,25 +17,22 @@ document.addEventListener("DOMContentLoaded", function () {
 // SCRIPT DE HOVER DAS INFOS
 
 // // SCRIPT CAPTURAR ID
-// const imagens = document.querySelectorAll(".imagem-tras");
 
-// imagens.forEach((imagem) => {
-//   imagem.addEventListener("click", () => {
-//     const productId = imagem.id;
-
-//     window.location.href = `produtos.php?id=${productId}`;
-//   });
-// });
 // // SCRIPT CAPTURAR ID
 
 // // SCRIPT IR SELECIONAR PRODUTO
-// const divs = document.querySelectorAll(".venda-img");
 
-// divs.forEach((div) => {
-//   div.addEventListener("click", () => {
-//     const productId = div.id;
+function trocarid() {
+  var elementos = document.querySelectorAll(".imagem-tras");
 
-//     window.location.href = "/produtos.php?id=${productId}";
-//   });
-// });
+  elementos.forEach(function (elemento) {
+    elemento.addEventListener("click", function () {
+      var id = elemento.getAttribute("data-id");
+
+      var link = "produtos.php?id=" + id;
+
+      window.location.href = link;
+    });
+  });
+}
 // // SCRIPT IR SELECIONAR PRODUTO

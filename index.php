@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MD Store</title>
 
-    <link rel="stylesheet" href="/styles/index.css">
-    <link rel="shortcut icon" href="/public/" type="image/x-icon">
-    <script src="/scripts/index.js"></script>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="shortcut icon" href="public/" type="image/x-icon">
+    <script src="scripts/index.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -36,9 +36,9 @@
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo '<div class="produto">';
-                    echo "<div class='venda-img'>";
-                    echo '<img src="'. $row["imagem_produto"]. '" alt="' . $row['nome_produto'] .'" class="imagem-frente" >';
-                    echo '<img src="'. $row["imagem_tras"]. '" alt="' . $row['nome_produto'] .'" class="imagem-tras">';
+                    echo "<div class='venda-img' '>";
+                    echo '<img src="'. $row["imagem_produto"]. '" alt="' . $row['nome_produto'] .'" class="imagem-frente"  >';
+                    echo '<img src="'. $row["imagem_tras"]. '" alt="' . $row['nome_produto'] .'" class="imagem-tras" data-id="'. $row["id"]. '" onclick="trocarid()">';
                     echo '<p class="nome">' . $row['nome_produto'] . '</p>';
                     echo '<p class="preco">R$ ' . $row['preco_produto'] . ' BRL</p>';
                     echo '</div>';
