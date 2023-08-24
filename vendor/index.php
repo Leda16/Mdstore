@@ -9,7 +9,10 @@
     <script src="../scripts/vendor.js"></script>
 </head>
 <body>
-
+<?php
+session_start();
+if(isset($_SESSION['loggedin']) == true) {
+    ?>
 <div class="container">
 
 <form class="form-vendor" action="process.php" method="post" enctype="multipart/form-data">
@@ -62,5 +65,28 @@
 <div id="warningMessage" style="display:none; color:red;">Adicionar produto?</div>
 
 <div id="sucessMessage" style="display:none; color:green;">Produto adicionado.</div>
+
+<?php
+} else {
+?>
+<div class="loginForm">
+
+<form action="../server/core.php" method="POST" class="login">
+    <input type="hidden" name="loginaction">
+    
+    <label for="username">Usuario</label>
+    <input type="text" name="username">
+
+    <label for="senha">Senha</label>
+    <input type="text" name="password">
+
+    <button type="submit">Entrar</button>
+</form>
+
+</div>
+<?php
+
+}
+?>
 </body>
 </html>
