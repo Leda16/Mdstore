@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MD Store | Painel</title>
 
-    <link rel="stylesheet" href="../styles/vendor.css">
+    <!-- <link rel="stylesheet" href="../styles/vendor.css"> -->
     <script src="../scripts/vendor.js"></script>
 </head>
 <body>
@@ -47,11 +47,14 @@ if(isset($_SESSION['loggedin']) == true) {
 
     <label for="imagem_produto" class="file-upload">Selecionar imagem</label>
     <input type="file" id="imagem_produto" name="imagem_produto" accept="image/*" onchange="previewImagem(event)" required>
-
+<br>
     <label for="imagem_tras" class="file-upload">Selecionar imagem Troca</label>
     <input type="file" id="imagem_produto" name="imagem_tras" accept="image/*" onchange="previewImagem(event)" required>
 
     <br>
+
+    <label for="tamanho" >Tamanho</label>
+    <input type="text" name="tamanho" required>
 
 
     <img src="#" alt="pre-visualizacao" id="preview" style="display: none;">

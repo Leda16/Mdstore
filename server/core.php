@@ -14,10 +14,10 @@ $result = $conn->query($sql);
 
 if($result->num_rows === 1) {
     $_SESSION['loggedin'] = true; //VARIAVEL PARA SETAR USUARIO LOGADOS
-    header('Location: ../vendor');
+    header('Location: /vendor');
 }else {
     // echo "sem usuario";
-    header('Location: ../vendor');
+    header('Location: /vendor');
 }
 
 }else {

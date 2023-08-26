@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+#form-checkout {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 100px 20%;
+  padding: 10px 20px;
+  background-color: #727272;
+  border: 2px solid #ffde97;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.container {
+  height: auto;
+  display: block;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  color: white;
+  border-radius: 4px;
+  border: 2px solid #ffd67f;
+}
+
+.container iframe {
+  background-color: #2c2b29 !important;
+  padding: 10px 20px !important;
+  width: 95.6%;
+  height: 18px !important;
+  transition: background-color 0.3s ease;
+}
+
+h1 {
+  font-size: 1.6em;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  margin-top: 30px;
+  transition: color 0.3s ease;
+}
+
+p {
+  font-size: 1em;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin: 10px 0;
+  transition: color 0.3s ease;
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 3px;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-bottom: 3px;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  background-color: #2c2b29;
+  transition: background-color 0.3s ease;
+  color: white;
+  border: 2px solid #ffe3a7;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  background-color: #2c2b29;
+  color: #fff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3cff00b7;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+input#cardNumber {
+  color: white;
+}
+
+h3.poweredby {
+  background-color: #7e7e7e;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 10px;
+}
+
+svg.powerbymer {
+  background-color: #707070;
+  top: 20px;
+  display: flex;
+  margin-left: 540px;
+}
+
+.pagarpix {
+  text-decoration: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  background-color: #464544;
+  transition: color 0.3s ease;
+}
+
+.pagarpix:hover {
+  color: #3cff00b7;
+  transition: color 0.3s ease;
+}

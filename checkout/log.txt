@@ -1,0 +1,8 @@
+approved | accredited | Calca | 1317408903 | 150 |  |  | test_user@gmail.com
+approved | accredited | Calca | 1317408903 | 150 |  |  | test_user@gmail.com
+approved | accredited | Calca | 1317408903 | 150 |  |  | test_user@gmail.com
+approved | accredited | Calca | 1317408903 | 150 | test_user@gmail.com
+approved | accredited | Calca | 1317408903 | 150 | test_user@gmail.com
+approved | accredited | Calca | 1317408903 | 150 | test_user@gmail.com
+approved | accredited | Calca | 1317408903 | 150 | test_user@gmail.com
+approved | accredited | Calca | 1317410493 | 150 | test_user@gmail.com

@@ -7,12 +7,12 @@ document
       var formData = new FormData(this);
 
       var xhr = new XMLHttpRequest();
-      xhr.open("POST", "../vendor/process.php", true);
+      xhr.open("POST", "/vendor/process.php", true);
       xhr.onreadystatechange = function () {
         if (xhr.readyState == XMLHttpRequest.DONE) {
           if (xhr.status == 200) {
             alert("Produto adicionado com sucesso!");
-            window.location.href = "../vendor/";
+            window.location.href = "/vendor/";
           } else {
             alert("Erro ao adicionar o produto!");
           }
