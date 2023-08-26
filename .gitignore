@@ -1,2 +1,10 @@
 
 Tela/vendor/phpmailer/phpmailer/
+checkout/vendor/doctrine/annotations/
+checkout/vendor/doctrine/common/
+checkout/vendor/doctrine/deprecations/
+checkout/vendor/doctrine/event-manager/
+checkout/vendor/doctrine/lexer/
+checkout/vendor/doctrine/persistence/
+checkout/vendor/mercadopago/dx-php/
+checkout/vendor/psr/cache/
