@@ -53,6 +53,10 @@ $email = $_SESSION['email'];
     );
 
     // echo json_encode($response);
+
+    $urlPay = $response['ticket_url'];
+
+    header("Location: $urlPay");
 	
 ?>
 

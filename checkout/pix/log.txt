@@ -10,3 +10,10 @@ pending | pending_waiting_transfer | 1 | 1317658183 | 150 | tbnaoska@gmail.com
 pending | pending_waiting_transfer | 1 | 1317658183 | 150 | tbnaoska@gmail.com
 pending | pending_waiting_transfer | 1 | 1317658585 | 150 | tbnaoska@gmail.com
 pending | pending_waiting_transfer | 1 | 1317656911 | 150 | martinho.duarte@limbersoftware.com.br
+pending | pending_waiting_transfer | 1 | 1317657293 | 150 | martinho.duarte@limbersoftware.com.br
+pending | pending_waiting_transfer | 1 | 1317659161 | 150 | martinho.duarte@limbersoftware.com.br
+pending | pending_waiting_transfer | 1 | 1317659183 | 150 | martinho.duarte@limbersoftware.com.br
+pending | pending_waiting_transfer | 1 | 1317659263 | 150 | martinho.duarte@limbersoftware.com.br
+pending | pending_waiting_transfer | 1 | 1317659279 | 150 | martinho.duarte@limbersoftware.com.br
+pending | pending_waiting_transfer | 1 | 1317659309 | 150 | tbnaoska@gmail.com
+pending | pending_waiting_transfer | 1  | 1317659341 | 150 | tbnaoska@gmail.com

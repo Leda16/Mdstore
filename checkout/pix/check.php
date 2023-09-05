@@ -12,7 +12,7 @@ if(isset($_GET['paymentId'])) {
     $sql = "SELECT * FROM payments WHERE id = $paymentId";
     $result = $conn->query($sql);
     if($result->num_rows > 0){
-        echo "ID achado";
+        // echo "ID achado";
 
         while($row = $result->fetch_assoc()){
             $status = $row["status"];
@@ -20,21 +20,48 @@ if(isset($_GET['paymentId'])) {
             $id = $row["id"];
         }
 
-        print_r("<br>");
-        print_r($status);
-        print_r("<br>");
-        print_r($status_detail);
-        print_r("<br>");
-        print_r($id);
-        print_r("<br>");
+        // print_r("<br>");
+        // print_r($status);
+        // print_r("<br>");
+        // print_r($status_detail);
+        // print_r("<br>");
+        // print_r($id);
+        // print_r("<br>");
 
 
         if($status === "pending"){
-            echo "pagamento pendente";
+            ?>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Pagamento pix | Processamento</title>
+            </head>
+            <body>
+                <h1>Seu pagamento PIX ainda esta em processamento, voce recebera um email quando aprovado</h1>
+                <h2>Seu id de pagamento <?php echo $id ?></h2>
+            </body>
+            </html>
+            <?php
         }
 
         if($status === "approved") {
-            echo "pagamento aprovado";
+            ?>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Pagamento pix | Aprovado</title>
+            </head>
+            <body>
+                <h1>Seu pagamento PIX foi aprovado, voce recebera mais informacoes no seu email em breve</h1>
+                <h2>Seu id de pagamento <?php echo $id ?></h2>
+
+            </body>
+            </html>
+            <?php
         }
 
     } else {
