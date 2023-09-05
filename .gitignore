@@ -8,3 +8,4 @@ checkout/vendor/doctrine/lexer/
 checkout/vendor/doctrine/persistence/
 checkout/vendor/mercadopago/dx-php/
 checkout/vendor/psr/cache/
+checkout/vendor/phpmailer/phpmailer/
