@@ -21,8 +21,6 @@ $paymentId = $_GET['data_id'];
 $payment = MercadoPago\Payment::find_by_id($paymentId);
 $metadata = $payment->metadata;
 $additionalData = json_decode($metadata->additional_data, true);
-// $iduser = $additionalData['iduser'];
-// $username = $additionalData['username'];
 $email = $additionalData['email'];
 
 
@@ -38,10 +36,10 @@ $paymentDescription = $conn->real_escape_string($payment->{'description'});
 $paymentId = $conn->real_escape_string($payment->{'id'});
 $paymentAmount =$conn->real_escape_string($payment->{'transaction_amount'});
 $email = $conn->real_escape_string($additionalData['email']);
+$method = $conn->real_escape_string("cartao");
 
-
-	$sql = "INSERT INTO payments (status, status_detail, description, id, transaction_amount, email) 
-			VALUES ('$paymentStatus', '$paymentStatusDetail', '$paymentDescription', '$paymentId' , '$paymentAmount', '$email')";
+	$sql = "INSERT INTO payments (status, status_detail, description, id, transaction_amount, email, method) 
+			VALUES ('$paymentStatus', '$paymentStatusDetail', '$paymentDescription', '$paymentId' , '$paymentAmount', '$email', '$method')";
 
 	if ($conn->query($sql) === TRUE) {
 		// echo "Dados inseridos com sucesso!";
@@ -109,7 +107,7 @@ $email = $conn->real_escape_string($additionalData['email']);
 	
 		"embeds" => [
 			[
-				"title" => "LaSystem Checkout System",
+				"title" => "LaSystem Checkout System | CC",
 	
 				"type" => "rich",
 
@@ -143,6 +141,11 @@ $email = $conn->real_escape_string($additionalData['email']);
 						"name" => "Email do Comprador",
 						"value" => "$email",
 						"inline" => false
+					],
+					[
+						"name" => "Preço do produto",
+						"value" => "$paymentAmount",
+						"inline" => false
 					]
 				]
 			]
@@ -162,28 +165,6 @@ $email = $conn->real_escape_string($additionalData['email']);
 	$response = curl_exec( $ch );
 	curl_close( $ch );
 
-	// if ($paymentStatus === 'approved') {
-	// $query = "SELECT * FROM compras WHERE iduser = '$iduser'";
-	// $result = $conn->query($query);
-	
-	// if ($result->num_rows > 0) {
-	// 	$row = $result->fetch_assoc();
-	// 	$existingPaymentDescription = $row['paymentDescription'];
-	// 	$existingPaymentIds = $row['paymentIds'];
-	
-	// 	$newPaymentDescription = $conn->real_escape_string($paymentDescription);
-	// 	$newPaymentIds = $conn->real_escape_string($paymentId);
-	
-	// 	$updatedPaymentDescription = $existingPaymentDescription . ';' . $newPaymentDescription;
-	// 	$updatedPaymentIds = $existingPaymentIds . ';' . $newPaymentIds;
-	
-	// 	$updateQuery = "UPDATE compras SET paymentDescription = '$updatedPaymentDescription', paymentIds = '$updatedPaymentIds' WHERE iduser = '$iduser'";
-	// 	$conn->query($updateQuery);
-	// } else {
-	// 	$insertQuery = "INSERT INTO compras (iduser, paymentDescription, paymentIds) VALUES ('$iduser', '$paymentDescription', '$paymentId')";
-	// 	$conn->query($insertQuery);
-	// }
-	// }
-	// $conn->close();
+	$conn -> close();
 
 ?>

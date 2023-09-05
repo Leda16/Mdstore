@@ -29,6 +29,8 @@ if($result->num_rows > 0) {
 } else {
     echo "erro encontrado";
 }
+
+$url = '/checkout/pix/?id=' . $id;
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +55,7 @@ if($result->num_rows > 0) {
 	<b>CVV:</b> 123 -
 	<b>Data:</b> 11/2025 -
 	<b>CPF:</b> 12345678909</p>
-  <a href="pix" class="pagarpix">Pagar com PIX?</a>
+  <a href="<?php echo $url;?>" class="pagarpix">Pagar com PIX?</a>
 	
     <div id="form-checkout__cardNumber" class="container"></div>
     <div id="form-checkout__expirationDate" class="container"></div>

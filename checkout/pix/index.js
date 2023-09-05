@@ -1,3 +1,4 @@
+const mp = new MercadoPago("TEST-231f4517-008d-4bf9-b402-9d1d56423616");
 (async function getIdentificationTypes() {
   try {
     const identificationTypes = await mp.getIdentificationTypes();
